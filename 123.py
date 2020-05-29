@@ -1,14 +1,14 @@
 cod=3458 #код
-m=0 #счетчик попыток
-n=0
+counter=0 #счетчик попыток
+pass_us=0
 print("введите код, после третеи попытки замок заблокируется")
-while m<=3:
-    n=int(input()) #ввод с клавиатуры
-    m=m+1
-    if n==cod:
+while counter<=3:
+    pass_us=int(input()) #ввод с клавиатуры
+    counter=counter+1
+    if pass_us==cod:
         print("open")
         break;
-    if not n==cod:
+    if not pass_us==cod:
         print("не верно повторите ввод")
-    if m==3:
+    if counter==3:
         print("lock") # число попыток превышено, замок заблокирован
