@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>runer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+        .str {
+            width: 100%;
+            height: 50px;
+            margin-top: 70px;
+            background-color: bisque;
+        }
+
+
+        @-webkit-keyframes scroll {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0)
+            }
+        }
+
+        @-moz-keyframes scroll {
+            0% {
+                -moz-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+
+            100% {
+                -moz-transform: translate(-100%, 0);
+                transform: translate(-100%, 0)
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0)
+            }
+        }
+
+        .marquee {
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            -webkit-animation: scroll 20s infinite linear;
+            -moz-animation: scroll 20s infinite linear;
+            animation: scroll 20s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="str">
+        <h1 class="marquee"><span>Тут може бути ваша реклама . . .</span></h1>
+    </div>
+
+</body>
+
+</html>
